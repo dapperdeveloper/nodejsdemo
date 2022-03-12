@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const PORT = process.env.PORT || 8080;
 app.use(express.json())
 
 app.get('/', (req,res) => {
@@ -7,6 +8,6 @@ app.get('/', (req,res) => {
 })
 
 
-app.listen(8000, () => console.log('server is running'))
+app.listen(PORT, () => console.log('server is running'))
 
 
